@@ -1,0 +1,12 @@
+[package]
+name = "trove-classifiers"
+version = "0.1.0"
+edition = "2021"
+description = "Python packaging classifiers as an Enum."
+repository = "https://github.com/ucodery/trove-classifiers"
+license = "BSD-3-Clause"
+keywords = ["python", "pypi", "pypa", "PEP301", "categories"]
+
+[dependencies]
+strum = { version = "0.24.1", features = ["derive"] }
+strum_macros = "0.24.3"
