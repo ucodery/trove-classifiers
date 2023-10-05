@@ -1,0 +1,32 @@
+name: publish
+on:
+  schedule:
+    - cron:  '1 2 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      steps:
+        - name: checkout
+          uses: actions/checkout@v3
+        - name: build with latest trove
+          run: |
+            cd src/
+            python -m pip install trove-classifiers
+            python build.py
+        - name: commit if changed
+          run: |-
+            if $(git diff --exit-code); then
+              git config --global user.email "ucodery@gmail.com"
+              git config --global user.name "ucodery"
+              git add lib.rs
+              git commit -m "Github Action: New trove classifiers"
+              git push
+        - name: build
+          uses: actions-rs/toolchain@v1
+          with:
+              toolchain: stable
+               override: true
+        - name: publish
+          uses: katyo/publish-crates@v2
+          with:
+              registry-token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
