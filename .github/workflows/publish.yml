@@ -19,6 +19,8 @@ jobs:
         - name: commit if changed
           run: |
             if $(git diff --exit-code); then
+              exit 1
+            else
               git config --global user.email "ucodery@gmail.com"
               git config --global user.name "ucodery"
               git add .
