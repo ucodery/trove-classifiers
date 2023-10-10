@@ -1,10 +1,12 @@
-name: publish
+name: publish new classifiers
 on:
   schedule:
     - cron:  '1 2 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
         - name: checkout
           uses: actions/checkout@v3
@@ -16,18 +18,18 @@ jobs:
           run: |
             cd src/
             python build.py
-        - name: commit if changed
+        - name: version bump if changed
           run: |
-            if $(git diff --exit-code); then
-              exit 1
-            else
-              git config --global user.email "ucodery@gmail.com"
-              git config --global user.name "ucodery"
-              git add .
-              git commit -m "Github Action: New trove classifiers"
+            git diff --exit-code
+            if [[ $? -eq 1 ]]; then
               cargo bump minor --git-tag
-              git push
+            else
+              exit 1
             fi
+        - name: commit and push
+          uses: stefanzweifel/git-auto-commit-action@v5
+          with:
+            commit_message: New trove classifiers
         - name: build
           uses: actions-rs/toolchain@v1
           with:
