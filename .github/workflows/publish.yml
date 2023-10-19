@@ -29,8 +29,7 @@ jobs:
             git config --global user.email '<>'
             git config --global user.name "$GITHUB_ACTOR"
             git commit -am "New trove classifiers"
-            git status
-            cargo bump minor --git-tag || git diff
+            cargo bump minor --git-tag
             git push --follow-tags
         - name: build
           uses: actions-rs/toolchain@v1
