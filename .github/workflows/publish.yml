@@ -25,7 +25,7 @@ jobs:
             if git diff --exit-code; then
               exit 1
             fi
-            export GIT_AUTHOR_NAME=${{github.GITHUB_ACTOR}}
+            export GIT_AUTHOR_NAME="$GITHUB_ACTOR"
             export GIT_AUTHOR_EMAIL='<>'
             git commit -am "New trove classifiers"
             cargo bump minor --git-tag
