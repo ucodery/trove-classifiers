@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2023.5.2";
+pub const PYPA_VERSION: &str = "2023.10.18";
 
 /// # Examples
 ///
@@ -155,6 +155,8 @@ pub enum Classifier {
     Environment__GPU__NVIDIACUDA__12__12_0,
     #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.1")]
     Environment__GPU__NVIDIACUDA__12__12_1,
+    #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.2")]
+    Environment__GPU__NVIDIACUDA__12__12_2,
     #[strum(serialize = "Environment :: Handhelds/PDA's")]
     Environment__HandheldsPDAs,
     #[strum(serialize = "Environment :: MacOS X")]
@@ -291,6 +293,8 @@ pub enum Classifier {
     Framework__Django__4_1,
     #[strum(serialize = "Framework :: Django :: 4.2")]
     Framework__Django__4_2,
+    #[strum(serialize = "Framework :: Django :: 5.0")]
+    Framework__Django__5_0,
     #[strum(serialize = "Framework :: Django CMS")]
     Framework__DjangoCMS,
     #[strum(serialize = "Framework :: Django CMS :: 3.4")]
@@ -355,6 +359,8 @@ pub enum Classifier {
     Framework__Masonite,
     #[strum(serialize = "Framework :: Matplotlib")]
     Framework__Matplotlib,
+    #[strum(serialize = "Framework :: MkDocs")]
+    Framework__MkDocs,
     #[strum(serialize = "Framework :: Nengo")]
     Framework__Nengo,
     #[strum(serialize = "Framework :: Odoo")]
@@ -411,6 +417,8 @@ pub enum Classifier {
     Framework__Plone__5_3,
     #[strum(serialize = "Framework :: Plone :: 6.0")]
     Framework__Plone__6_0,
+    #[strum(serialize = "Framework :: Plone :: 6.1")]
+    Framework__Plone__6_1,
     #[strum(serialize = "Framework :: Plone :: Addon")]
     Framework__Plone__Addon,
     #[strum(serialize = "Framework :: Plone :: Core")]
@@ -988,6 +996,8 @@ pub enum Classifier {
     ProgrammingLanguage__Lisp,
     #[strum(serialize = "Programming Language :: Logo")]
     ProgrammingLanguage__Logo,
+    #[strum(serialize = "Programming Language :: Lua")]
+    ProgrammingLanguage__Lua,
     #[strum(serialize = "Programming Language :: ML")]
     ProgrammingLanguage__ML,
     #[strum(serialize = "Programming Language :: Modula")]
@@ -1064,6 +1074,8 @@ pub enum Classifier {
     ProgrammingLanguage__Python__3_11,
     #[strum(serialize = "Programming Language :: Python :: 3.12")]
     ProgrammingLanguage__Python__3_12,
+    #[strum(serialize = "Programming Language :: Python :: 3.13")]
+    ProgrammingLanguage__Python__3_13,
     #[strum(serialize = "Programming Language :: Python :: Implementation")]
     ProgrammingLanguage__Python__Implementation,
     #[strum(serialize = "Programming Language :: Python :: Implementation :: CPython")]
@@ -1496,6 +1508,8 @@ pub enum Classifier {
     Topic__ScientificEngineering__Mathematics,
     #[strum(serialize = "Topic :: Scientific/Engineering :: Medical Science Apps.")]
     Topic__ScientificEngineering__MedicalScienceApps_,
+    #[strum(serialize = "Topic :: Scientific/Engineering :: Oceanography")]
+    Topic__ScientificEngineering__Oceanography,
     #[strum(serialize = "Topic :: Scientific/Engineering :: Physics")]
     Topic__ScientificEngineering__Physics,
     #[strum(serialize = "Topic :: Scientific/Engineering :: Visualization")]
