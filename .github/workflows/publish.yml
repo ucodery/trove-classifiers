@@ -19,6 +19,7 @@ jobs:
           run: |
             cd src/
             python build.py
+            cargo fmt --all
         - name: version bump if changed
           run: |
             set -x
