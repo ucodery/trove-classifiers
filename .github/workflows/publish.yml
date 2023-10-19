@@ -30,7 +30,7 @@ jobs:
             git config --global user.name "$GITHUB_ACTOR"
             git commit -am "New trove classifiers"
             git status
-            cargo bump minor --git-tag || git status
+            cargo bump minor --git-tag || git diff
             git push --follow-tags
         - name: build
           uses: actions-rs/toolchain@v1
