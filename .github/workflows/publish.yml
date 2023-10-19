@@ -21,6 +21,7 @@ jobs:
             python build.py
         - name: version bump if changed
           run: |
+            set -x
             if git diff --exit-code; then
               exit 1
             fi
