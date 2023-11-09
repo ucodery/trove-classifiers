@@ -38,6 +38,8 @@ jobs:
     needs: build
     if: needs.build.outputs.built == 'true'
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: publish
         uses: katyo/publish-crates@v2
         with:
