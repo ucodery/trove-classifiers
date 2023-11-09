@@ -29,7 +29,6 @@ jobs:
           git config --global user.email '<>'
           git config --global user.name "$GITHUB_ACTOR"
           git commit -am "New trove classifiers"
-          git push
           echo "did=true" >> "$GITHUB_OUTPUT"
   publish:
     runs-on: ubuntu-latest
