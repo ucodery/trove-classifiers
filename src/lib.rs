@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2023.11.13";
+pub const PYPA_VERSION: &str = "2023.11.14";
 
 /// # Examples
 ///
@@ -992,6 +992,8 @@ pub enum Classifier {
     ProgrammingLanguage__Forth,
     #[strum(serialize = "Programming Language :: Fortran")]
     ProgrammingLanguage__Fortran,
+    #[strum(serialize = "Programming Language :: Go")]
+    ProgrammingLanguage__Go,
     #[strum(serialize = "Programming Language :: Haskell")]
     ProgrammingLanguage__Haskell,
     #[strum(serialize = "Programming Language :: Java")]
