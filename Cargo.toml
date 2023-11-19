@@ -1,6 +1,6 @@
 [package]
 name = "trove-classifiers"
-version = "0.13.0"
+version = "0.14.0"
 edition = "2021"
 description = "Python packaging classifiers as an Enum."
 repository = "https://github.com/ucodery/trove-classifiers"
