@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2023.11.14";
+pub const PYPA_VERSION: &str = "2023.11.22";
 
 /// # Examples
 ///
@@ -463,6 +463,8 @@ pub enum Classifier {
     Framework__SetuptoolsPlugin,
     #[strum(serialize = "Framework :: Sphinx")]
     Framework__Sphinx,
+    #[strum(serialize = "Framework :: Sphinx :: Domain")]
+    Framework__Sphinx__Domain,
     #[strum(serialize = "Framework :: Sphinx :: Extension")]
     Framework__Sphinx__Extension,
     #[strum(serialize = "Framework :: Sphinx :: Theme")]
