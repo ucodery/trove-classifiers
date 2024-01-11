@@ -18,6 +18,7 @@ jobs:
           python -m pip install trove-classifiers
           pushd src && python build.py; popd
           cargo fmt --all
+          cargo build
       - name: commit if changed
         id: commit
         run: |
@@ -30,8 +31,6 @@ jobs:
           git commit -am "New trove classifiers"
           cargo install cargo-bump
           cargo bump minor --git-tag
-          cargo build
-          git commit --amend --no-edit
           git push --follow-tags
           echo "did=true" >> "$GITHUB_OUTPUT"
   publish:
