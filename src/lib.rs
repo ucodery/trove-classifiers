@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2023.11.29";
+pub const PYPA_VERSION: &str = "2024.1.8";
 
 /// # Examples
 ///
@@ -1558,6 +1558,18 @@ pub enum Classifier {
     Topic__SoftwareDevelopment__Documentation,
     #[strum(serialize = "Topic :: Software Development :: Embedded Systems")]
     Topic__SoftwareDevelopment__EmbeddedSystems,
+    #[strum(
+        serialize = "Topic :: Software Development :: Embedded Systems :: Controller Area Network (CAN)"
+    )]
+    Topic__SoftwareDevelopment__EmbeddedSystems__ControllerAreaNetworkCAN,
+    #[strum(
+        serialize = "Topic :: Software Development :: Embedded Systems :: Controller Area Network (CAN) :: CANopen"
+    )]
+    Topic__SoftwareDevelopment__EmbeddedSystems__ControllerAreaNetworkCAN__CANopen,
+    #[strum(
+        serialize = "Topic :: Software Development :: Embedded Systems :: Controller Area Network (CAN) :: J1939"
+    )]
+    Topic__SoftwareDevelopment__EmbeddedSystems__ControllerAreaNetworkCAN__J1939,
     #[strum(serialize = "Topic :: Software Development :: Internationalization")]
     Topic__SoftwareDevelopment__Internationalization,
     #[strum(serialize = "Topic :: Software Development :: Interpreters")]
