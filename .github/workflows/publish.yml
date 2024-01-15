@@ -31,6 +31,8 @@ jobs:
           git commit -am "New trove classifiers"
           cargo install cargo-bump
           cargo bump minor --git-tag
+          cargo build
+          git commit --amend --no-edit
           git push --follow-tags
           echo "did=true" >> "$GITHUB_OUTPUT"
   publish:
