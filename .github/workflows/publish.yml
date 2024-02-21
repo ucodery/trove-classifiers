@@ -32,7 +32,7 @@ jobs:
           cargo install cargo-bump
           cargo bump minor --git-tag
           cargo build
-          git commit --amend --no-edit
+          git commit --all --amend --no-edit
           git push --follow-tags
           echo "did=true" >> "$GITHUB_OUTPUT"
   publish:
