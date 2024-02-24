@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2024.2.22";
+pub const PYPA_VERSION: &str = "2024.2.23";
 
 /// # Examples
 ///
@@ -612,6 +612,11 @@ pub enum Classifier {
     License__OSIApproved__EclipsePublicLicense1_0EPL1_0,
     #[strum(serialize = "License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)")]
     License__OSIApproved__EclipsePublicLicense2_0EPL2_0,
+    #[strum(
+        serialize = "License :: OSI Approved :: Educational Community License, Version 2.0 (ECL-2.0)"
+    )]
+    License__OSIApproved__EducationalCommunityLicense,
+    Version2_0ECL2_0,
     #[strum(serialize = "License :: OSI Approved :: Eiffel Forum License")]
     License__OSIApproved__EiffelForumLicense,
     #[strum(serialize = "License :: OSI Approved :: European Union Public Licence 1.0 (EUPL 1.0)")]
