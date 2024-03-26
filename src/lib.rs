@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2024.3.3";
+pub const PYPA_VERSION: &str = "2024.3.25";
 
 /// # Examples
 ///
@@ -385,6 +385,14 @@ pub enum Classifier {
     Framework__Odoo__16_0,
     #[strum(serialize = "Framework :: Odoo :: 17.0")]
     Framework__Odoo__17_0,
+    #[strum(serialize = "Framework :: OpenTelemetry")]
+    Framework__OpenTelemetry,
+    #[strum(serialize = "Framework :: OpenTelemetry :: Distros")]
+    Framework__OpenTelemetry__Distros,
+    #[strum(serialize = "Framework :: OpenTelemetry :: Exporters")]
+    Framework__OpenTelemetry__Exporters,
+    #[strum(serialize = "Framework :: OpenTelemetry :: Instrumentations")]
+    Framework__OpenTelemetry__Instrumentations,
     #[strum(serialize = "Framework :: Opps")]
     Framework__Opps,
     #[strum(serialize = "Framework :: Paste")]
