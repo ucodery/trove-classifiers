@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2024.3.25";
+pub const PYPA_VERSION: &str = "2024.4.10";
 
 /// # Examples
 ///
@@ -781,6 +781,8 @@ pub enum Classifier {
     NaturalLanguage__Cantonese,
     #[strum(serialize = "Natural Language :: Catalan")]
     NaturalLanguage__Catalan,
+    #[strum(serialize = "Natural Language :: Catalan (Valencian)")]
+    NaturalLanguage__CatalanValencian,
     #[strum(serialize = "Natural Language :: Chinese (Simplified)")]
     NaturalLanguage__ChineseSimplified,
     #[strum(serialize = "Natural Language :: Chinese (Traditional)")]
@@ -803,6 +805,8 @@ pub enum Classifier {
     NaturalLanguage__French,
     #[strum(serialize = "Natural Language :: Galician")]
     NaturalLanguage__Galician,
+    #[strum(serialize = "Natural Language :: Georgian")]
+    NaturalLanguage__Georgian,
     #[strum(serialize = "Natural Language :: German")]
     NaturalLanguage__German,
     #[strum(serialize = "Natural Language :: Greek")]
