@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2024.7.1";
+pub const PYPA_VERSION: &str = "2024.7.2";
 
 /// # Examples
 ///
@@ -157,6 +157,12 @@ pub enum Classifier {
     Environment__GPU__NVIDIACUDA__12__12_1,
     #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.2")]
     Environment__GPU__NVIDIACUDA__12__12_2,
+    #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.3")]
+    Environment__GPU__NVIDIACUDA__12__12_3,
+    #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.4")]
+    Environment__GPU__NVIDIACUDA__12__12_4,
+    #[strum(serialize = "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.5")]
+    Environment__GPU__NVIDIACUDA__12__12_5,
     #[strum(serialize = "Environment :: Handhelds/PDA's")]
     Environment__HandheldsPDAs,
     #[strum(serialize = "Environment :: MacOS X")]
