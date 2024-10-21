@@ -29,7 +29,7 @@ use std::str::Split;
 use strum_macros::{AsRefStr, Display, EnumString, IntoStaticStr};
 
 /// The version of the python package pypa/trove-classifiers that is captured by Classifier
-pub const PYPA_VERSION: &str = "2024.10.13";
+pub const PYPA_VERSION: &str = "2024.10.16";
 
 /// # Examples
 ///
@@ -299,10 +299,14 @@ pub enum Classifier {
     Framework__Django__4_1,
     #[strum(serialize = "Framework :: Django :: 4.2")]
     Framework__Django__4_2,
+    #[strum(serialize = "Framework :: Django :: 5")]
+    Framework__Django__5,
     #[strum(serialize = "Framework :: Django :: 5.0")]
     Framework__Django__5_0,
     #[strum(serialize = "Framework :: Django :: 5.1")]
     Framework__Django__5_1,
+    #[strum(serialize = "Framework :: Django :: 5.2")]
+    Framework__Django__5_2,
     #[strum(serialize = "Framework :: Django CMS")]
     Framework__DjangoCMS,
     #[strum(serialize = "Framework :: Django CMS :: 3.4")]
